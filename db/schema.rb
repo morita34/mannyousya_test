@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2023_07_12_160143) do
   create_table "tasks", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "title", null:false
-    t.text "content", null:false
+    t.string "title"
+    t.text "content"
   end
 
 end

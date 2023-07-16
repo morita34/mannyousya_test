@@ -16,7 +16,7 @@ class TasksController < ApplicationController
 
     if @task.save
       flash[:notice] = 'Task was successfully created.'
-      redirect_to tas_path
+      redirect_to @task
     else
       render :new
     end
@@ -31,7 +31,7 @@ class TasksController < ApplicationController
 
     if @task.update(task_params)
       flash[:notice] = 'Task was successfully updated.'
-      redirect_to task_path(@task)
+      redirect_to @task
     else
       render :edit
     end
@@ -47,6 +47,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :content)
+    params.require(:task).permit(:name, :description)
   end
 end
