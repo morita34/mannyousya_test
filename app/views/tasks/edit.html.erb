@@ -2,4 +2,4 @@
 
 <%= render 'form', task: @task ,class: 'update-user' %>
 
-<%= link_to 'Back', tasks_path ,class: 'back', id: 'back' %>
+<%= link_to Task.human_attribute_name(:back), tasks_path ,class: 'back', id: 'back' %>
